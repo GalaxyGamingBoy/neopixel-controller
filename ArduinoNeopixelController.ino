@@ -5,13 +5,13 @@
 
 LightsModule* lights = nullptr;
 
-void MainProgram(void) {
-  lights->ColorWipeAll(Color{255, 127, 72}, 100);
-  lights->SetAllToColor(Color{255, 255, 255});
+void MainProgram(LightsModule* controller) {
+  controller->ColorWipeAll(Color{255, 127, 72}, 100);
+  controller->SetAllToColor(Color{255, 255, 255});
   
-  for (int i = 0; i < 3; ++i) lights->ChaseAll(Color{0, 0, 255}, 100);
+  for (int i = 0; i < 3; ++i) controller->ChaseAll(Color{0, 0, 255}, 100);
 
-  lights->ColorWipeAll(Color{255, 0, 0}, 50);
+  controller->ColorWipeAll(Color{255, 0, 0}, 50);
 }
 
 void setup() {

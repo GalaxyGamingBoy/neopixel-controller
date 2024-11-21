@@ -19,7 +19,7 @@ void LightsModule::Clear() {
 void LightsModule::Loop() {
   this->Clear();
 
-  if (this->program_ != nullptr) this->program_();
+  if (this->program_ != nullptr) this->program_(this);
 }
 
 void LightsModule::SetProgram(void (*program)()) {

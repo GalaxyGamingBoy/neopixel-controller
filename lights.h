@@ -27,7 +27,7 @@ class LightsModule {
   Adafruit_NeoPixel neopixel_strip_;
   
   //! The selected program the loop is set to use.
-  void (*program_)();
+  void (*program_)(LightsModule*);
   
   /**
   * @brief Convert a color from RGB to NEOPIXEL
